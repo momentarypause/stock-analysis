@@ -15,8 +15,8 @@ Originally, the script to pull this data required Excel to loop through the enti
 If the recipient of this report wishes to increase the dataset and keep an eye on hundreds or thousands of stocks, that significantly increases the run time and could add up to minutes of wait time.  In a world of data at our fingertips, this is very 1995 when we would download mp3s at night because it could take hours.  in 2021, we are beyond this.
 
 To reduce run time, I refactored the code:
-*I declared "Option Explicit" at the top of the code. This forced me to declare all variables. Because I declared all variables, I was able to use the data types that made sense and used the least bytes in memory.  Undeclared variables default to variant type, which takes the most memory and can slow code.
-*I updated the code so it looped through the dataset just one time and created arrays to store the new table values in. I then pulled these values into the AllStocksAnalysis table for easy viewing.
+-I declared "Option Explicit" at the top of the code. This forced me to declare all variables. Because I declared all variables, I was able to use the data types that made sense and used the least bytes in memory.  Undeclared variables default to variant type, which takes the most memory and can slow code.
+-I updated the code so it looped through the dataset just one time and created arrays to store the new table values in. I then pulled these values into the AllStocksAnalysis table for easy viewing.
 
 ### Effect on Run Time
 The results of the above changes were significant. Running the refactored script for 2017 was 16 times faster than the original.  Running refactored script for 2018 was 12.5 times faster.
